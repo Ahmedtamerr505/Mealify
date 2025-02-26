@@ -1,0 +1,516 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+/* ----------nav bar---------- */
+.nav{
+    height: 90px;
+    background-color:white;
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 800;
+    box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+li{
+    list-style: none;
+}
+.logo{
+    margin-left: 75px;
+    font-size: 30px;
+    font-weight: 800;
+}
+.logo::after{
+    content: ".";
+    color: #ce1212;
+    font-size: 40px;
+    align-items: center;
+
+}
+.ul{
+    font-size: 20px;
+    font-weight: 500;
+}
+.moon{
+    font-size: 25px;
+    margin-right: 80px;
+}
+/* ------------home------------ */
+.home{
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    margin-top: 90px;
+    background-color: #eee;
+}
+.home-word{
+    align-content: center;
+    padding: 0 250px 100px 50px;
+}
+.home-word h1{
+    margin: 0;
+    font-size: 70px;
+    font-family: "Amatic SC", sans-serif;
+}
+.home-btns{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    padding-left: 20px;
+    transition: all 1s;
+}
+.wt{
+    padding-left: 10px;
+}
+.home-word .ar{
+    padding: 10px 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color:#ce1212;
+    color: white;
+    transition: all 0.5s;
+}
+.home-word i{
+    font-size: 35px;
+}
+.btn:hover{
+    color: #ce1212;
+}
+.ar:hover {
+    background-color:crimson;
+}
+.hero{
+    margin: 50px 60px 30px 10px;
+    border-radius: 50%;
+}
+.hero img{
+    width: 100%;
+}
+.hero:hover img{
+  animation-name: move;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes move{
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+      }
+      10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+      }
+      20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+      }
+      30% {
+        transform: translate(3px, 2px) rotate(0deg);
+      }
+      40% {
+        transform: translate(1px, -1px) rotate(1deg);
+      }
+      50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+      }
+      60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+      }
+      70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+      }
+      80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+      }
+      90% {
+        transform: translate(1px, 2px) rotate(0deg);
+      }
+      100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+      }
+}
+/* --chefs-- */
+.title{
+    text-align: center;
+}
+.title h2{
+  font-size: 15px;
+  color: #7f7f9e;
+  margin: 0;
+}
+.title span{
+  color: #ce1212;
+}
+.title p{
+    font-size: 50px;
+    margin: 0;
+    font-family:"Amatic SC", sans-serif ;
+}
+.chef{
+    text-align: center;
+    transition: all 0.3s;
+    width: 28%;
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.chef img{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.chefs{
+    justify-content: space-around;
+    align-content: center;
+}
+.chef:hover{
+    transform: scale(1.1);
+}
+.chefs .social-box {
+    background-color: #ffffff4d;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 30px;
+    right: -50px;
+    transition: right 0.3s;
+    opacity: 0;
+  }
+  .chefs .chef:hover .social-box {
+    right: 10px;
+    transition: right 0.2s 0.3s;
+    opacity: 1;
+  }
+  .chefs .social-box i {
+    font-size: 20px;
+    padding: 10px 5px;
+    color: #37373f66;
+    transition: color 1s;
+  }
+  .chefs .social-box i:hover {
+    color: #37373fe6;
+  }
+  /*----------- Gallery ----------*/
+.gr{
+    text-align: center;
+    background-color: #eee;
+}
+.po h2{
+  color: #7f7f9e;
+  font-size: 15px;
+  margin: 0;
+}
+.po span{
+  color: #ce1212;
+}
+.po p{
+  font-size: 50px;
+  font-family: "Amatic SC", sans-serif;
+  margin: 0;
+}
+  .gallery{
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+  }
+  .gallery-child1{
+    margin-left: 90px;
+  }
+  .gallery-child2{
+    margin-right: 90px;
+  }
+  .meals{
+    width: 400px;
+    position: relative;
+    border: 4px solid #fff;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    overflow: hidden;
+    transition: all 1s;
+  }
+  .fade{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    color: #fff;
+    top: 100%;
+    transition: all 1s;
+    opacity: 0;
+  }
+.meals:hover img{
+    transform: scale(1.2);
+}
+.meals:hover .fade{
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+opacity: 1;
+}
+  .meals img{
+    width: 100%;
+    transition: all 1s;
+  }
+  /* ------contact------- */
+  .ct{
+    text-align: center;
+  }
+  .ct h5{
+    font-size: 15px;
+    margin: 0;
+    color: #7f7f9e;
+    font-family: "Inter", sans-serif;
+  }
+  .ct span{
+    color: #ce1212;
+  }
+  .ct p{
+    font-size: 50px;
+    font-family:"Amatic SC", sans-serif;
+    margin: 0;
+  }
+  .cot{
+    background-color:#fff;
+    width: 1300px;
+    margin-left: 65px;
+    position: relative;
+  }
+  .contact iframe{
+    width: 100%;
+    height: 300px;
+    margin-bottom: 30px;
+  }
+  .icon{
+    width:50px ;
+    height:50px ;
+    border-radius: 50%;
+    background-color: #ce1212;
+    text-align: center;
+    align-content: center;
+  }
+  .icon i{
+    font-size: 20px;
+    color: #fff;
+  }
+  .address-word{
+    padding-left: 8px;
+  }
+  .cot h3{
+    color: #7d7d7d;
+    font-size: 25px;
+margin: 0;
+  }
+  .cot p{
+margin: 0;
+  }
+  .address{
+    position: absolute;
+    padding: 20px;
+    display: flex;
+    left: 0;
+    right: 50%;
+    background-color: #f5f5f5;
+  }
+  .email-word{
+    padding-left: 8px;
+  }
+  .email{
+    position: absolute;
+    padding: 20px;
+    display: flex;
+    left: 49%;
+    right: 0;
+    background-color: #f5f5f5;
+    margin-left: 25px;
+  }
+  .address-email{
+    background-color: #fff;
+    margin-bottom: 100px;
+  }
+  .phone-word{
+    padding-left: 8px;
+  }
+  .phone{
+    position: absolute;
+    padding: 20px;
+    display: flex;
+    left: 0;
+    right: 50%;
+    background-color: #f5f5f5;
+  }
+  .opening-word{
+    padding-left: 8px;
+  }
+  .opening-hours{
+    position: absolute;
+    padding: 20px;
+    display: flex;
+    left: 49%;
+    right: 0;
+    background-color: #f5f5f5;
+    margin-left: 25px;
+  }
+  .info{
+    background-color:#fff;
+    box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
+  }
+  .name-email{
+    display: flex;
+    width: 1270px;
+  }
+  input, textarea{
+    width: 1250px;
+    padding: 15px;
+    outline: 1;
+    font-size: 15px;
+    margin-left: 23px;
+}
+textarea{
+  width: 1250px;
+  margin-left: 23px;
+  padding-bottom: 100px;
+}
+.button{
+  text-align: center;
+  border: 3px solid transparent;
+  border-radius: 25px;
+  padding: 13px 35px  ;
+  background-color: #ce1212;
+  color: #fff;
+  margin-left: 550px;
+  transition: all 0.4s;
+}
+.button:hover{
+  background-color: crimson;
+}
+/* last */
+div.metal{
+  position: relative;
+}
+.metal img{
+  width: 100%;
+  height: 420px;
+}
+div.back-lond{
+display: flex;
+position: absolute;
+color: #fff;
+top: 0;
+right: 0;
+left: 0;
+bottom: 0;
+font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.first{
+  width: 25%;
+  margin-left: 30px;
+}
+
+.first h3{
+  text-align: center;
+  font-size: 20px;
+}
+.one{
+  display: flex;
+  align-content: center;
+}
+.one img{
+   height: 40px;
+   width: 40px;
+   border-radius: 50%;
+   margin-top: 10px;
+}
+.one h2{
+  margin:0 0 0 7px;
+  font-size: 30px;
+}
+.legs::after{
+    content: ".";
+    color: #ce1212;
+    font-size: 40px;
+    align-items: center;
+}
+.gry{
+  height: 3px;
+  width: 350px;
+  background-color: #7d7d7d;
+}
+.icns i{
+  font-size: 20px;
+  padding: 0 35px 10px 30px;
+}
+.second{
+  width: 45%;
+  margin-left: 30px;
+}
+.second h3{
+  font-size: 20px;
+}
+.email-btn{
+  display: flex;
+}
+.email-btn input{
+  padding: 10px;
+  margin-left: 0;
+}
+.email-btn button{
+  display: flex;
+  padding: 10px;
+  font-size: 15px;
+  background-color: #ce1212;
+  color: #fff;
+  margin-left: 10px;
+  transition: all 0.5s;
+}
+.email-btn button i{
+ padding: 3px;
+}
+.email-btn:hover button{
+  background-color: crimson;
+}
+.link{
+  display: flex;
+}
+.link .qu{
+  font-size: 17px;
+  padding: 6px 210px 6px 6px;
+  transition: all 0.4s;
+}
+.qu:hover{
+  background-color: gray;
+  transform: translate(10px);
+}
+.third{
+  margin-left: 30px;
+}
+.third h3{
+  font-size: 20px;
+}
+.third i{
+  color: #ce1212;
+  padding-right: 8px;
+  font-size: 22px;
+}
