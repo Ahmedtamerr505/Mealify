@@ -1,16 +1,22 @@
-*{
+html {
+    scroll-behavior: smooth; /* Added for smooth scrolling */
+}
+
+* {
     box-sizing: border-box;
 }
-body{
+
+body {
     margin: 0;
     padding: 0;
     font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
 /* ----------nav bar---------- */
-.nav{
+.nav {
     height: 90px;
-    background-color:white;
-    position:fixed;
+    background-color: white;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -18,56 +24,98 @@ body{
     z-index: 800;
     box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
 }
-a{
+
+a {
     text-decoration: none;
     color: inherit;
 }
-li{
+
+li {
     list-style: none;
 }
-.logo{
+
+.logo {
     margin-left: 75px;
     font-size: 30px;
     font-weight: 800;
 }
-.logo::after{
+
+.logo::after {
     content: ".";
     color: #ce1212;
     font-size: 40px;
     align-items: center;
-
 }
-.ul{
+
+.ul {
     font-size: 20px;
     font-weight: 500;
 }
-.moon{
+
+.moon {
     font-size: 25px;
     margin-right: 80px;
 }
+
+/* --- Modified styles for active class and underline --- */
+.ul ul li a {
+    text-decoration: none;
+    color: #212529;
+    /* Explicitly set default text color, or rely on parent if suitable */
+    position: relative;
+    padding-bottom: 5px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.ul ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ce1212;
+    transition: width 0.3s ease-out;
+}
+
+.ul ul li a:hover::after,
+.ul ul li a.active::after {
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+
+/* --- End of modified styles --- */
+
+
 /* ------------home------------ */
-.home{
+.home {
     display: flex;
     justify-content: space-between;
     height: 100vh;
     margin-top: 90px;
     background-color: #eee;
 }
-.home-word{
+
+.home-word {
     align-content: center;
     padding: 0 250px 100px 50px;
 }
-.home-word h1{
+
+.home-word h1 {
     margin: 0;
     font-size: 70px;
     font-family: "Amatic SC", sans-serif;
 }
-.home-btns{
+
+.home-btns {
     display: flex;
     align-items: center;
     margin-top: 40px;
 }
-.btn{
+
+.btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,93 +123,117 @@ li{
     padding-left: 20px;
     transition: all 1s;
 }
-.wt{
+
+.wt {
     padding-left: 10px;
 }
-.home-word .ar{
+
+.home-word .ar {
     padding: 10px 20px;
     border-top-left-radius: 0;
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    background-color:#ce1212;
+    background-color: #ce1212;
     color: white;
     transition: all 0.5s;
 }
-.home-word i{
+
+.home-word i {
     font-size: 35px;
 }
-.btn:hover{
+
+.btn:hover {
     color: #ce1212;
 }
+
 .ar:hover {
-    background-color:crimson;
+    background-color: crimson;
 }
-.hero{
+
+.hero {
     margin: 50px 60px 30px 10px;
     border-radius: 50%;
 }
-.hero img{
+
+.hero img {
     width: 100%;
 }
-.hero:hover img{
-  animation-name: move;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+
+.hero:hover img {
+    animation-name: move;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
-@keyframes move{
+
+@keyframes move {
     0% {
         transform: translate(1px, 1px) rotate(0deg);
-      }
-      10% {
+    }
+
+    10% {
         transform: translate(-1px, -2px) rotate(-1deg);
-      }
-      20% {
+    }
+
+    20% {
         transform: translate(-3px, 0px) rotate(1deg);
-      }
-      30% {
+    }
+
+    30% {
         transform: translate(3px, 2px) rotate(0deg);
-      }
-      40% {
+    }
+
+    40% {
         transform: translate(1px, -1px) rotate(1deg);
-      }
-      50% {
+    }
+
+    50% {
         transform: translate(-1px, 2px) rotate(-1deg);
-      }
-      60% {
+    }
+
+    60% {
         transform: translate(-3px, 1px) rotate(0deg);
-      }
-      70% {
+    }
+
+    70% {
         transform: translate(3px, 1px) rotate(-1deg);
-      }
-      80% {
+    }
+
+    80% {
         transform: translate(-1px, -1px) rotate(1deg);
-      }
-      90% {
+    }
+
+    90% {
         transform: translate(1px, 2px) rotate(0deg);
-      }
-      100% {
+    }
+
+    100% {
         transform: translate(1px, -2px) rotate(-1deg);
-      }
+    }
 }
+
 /* --chefs-- */
-.title{
+.title {
     text-align: center;
 }
-.title h2{
-  font-size: 15px;
-  color: #7f7f9e;
-  margin: 0;
+
+.title h2 {
+    font-size: 15px;
+    color: #7f7f9e;
+    margin: 0;
 }
-.title span{
-  color: #ce1212;
+
+.title span {
+    color: #ce1212;
 }
-.title p{
+
+.title p {
     font-size: 50px;
     margin: 0;
-    font-family:"Amatic SC", sans-serif ;
+    font-family: "Amatic SC", sans-serif;
 }
-.chef{
+
+.chef {
     text-align: center;
     transition: all 0.3s;
     width: 28%;
@@ -171,18 +243,22 @@ li{
     box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
-.chef img{
+
+.chef img {
     width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-.chefs{
+
+.chefs {
     justify-content: space-around;
     align-content: center;
 }
-.chef:hover{
+
+.chef:hover {
     transform: scale(1.1);
 }
+
 .chefs .social-box {
     background-color: #ffffff4d;
     width: fit-content;
@@ -193,51 +269,62 @@ li{
     right: -50px;
     transition: right 0.3s;
     opacity: 0;
-  }
-  .chefs .chef:hover .social-box {
+}
+
+.chefs .chef:hover .social-box {
     right: 10px;
     transition: right 0.2s 0.3s;
     opacity: 1;
-  }
-  .chefs .social-box i {
+}
+
+.chefs .social-box i {
     font-size: 20px;
     padding: 10px 5px;
     color: #37373f66;
     transition: color 1s;
-  }
-  .chefs .social-box i:hover {
+}
+
+.chefs .social-box i:hover {
     color: #37373fe6;
-  }
-  /*----------- Gallery ----------*/
-.gr{
+}
+
+/*----------- Gallery ----------*/
+.gr {
     text-align: center;
     background-color: #eee;
 }
-.po h2{
-  color: #7f7f9e;
-  font-size: 15px;
-  margin: 0;
+
+.po h2 {
+    color: #7f7f9e;
+    font-size: 15px;
+    margin: 0;
 }
-.po span{
-  color: #ce1212;
+
+.po span {
+    color: #ce1212;
 }
-.po p{
-  font-size: 50px;
-  font-family: "Amatic SC", sans-serif;
-  margin: 0;
+
+.po p {
+    font-size: 50px;
+    font-family: "Amatic SC", sans-serif;
+    margin: 0;
 }
-  .gallery{
+
+.gallery {
     text-align: center;
     display: flex;
     justify-content: space-around;
-  }
-  .gallery-child1{
+}
+
+.gallery-child1 {
     margin-left: 90px;
-  }
-  .gallery-child2{
+}
+
+.gallery-child2 {
     margin-right: 90px;
-  }
-  .meals{
+}
+
+.meals {
     width: 400px;
     position: relative;
     border: 4px solid #fff;
@@ -247,8 +334,9 @@ li{
     margin-right: 10px;
     overflow: hidden;
     transition: all 1s;
-  }
-  .fade{
+}
+
+.fade {
     background-color: rgba(0, 0, 0, 0.7);
     width: 100%;
     height: 100%;
@@ -259,85 +347,103 @@ li{
     top: 100%;
     transition: all 1s;
     opacity: 0;
-  }
-.meals:hover img{
+}
+
+.meals:hover img {
     transform: scale(1.2);
 }
-.meals:hover .fade{
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-opacity: 1;
+
+.meals:hover .fade {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
 }
-  .meals img{
+
+.meals img {
     width: 100%;
     transition: all 1s;
-  }
-  /* ------contact------- */
-  .ct{
+}
+
+/* ------contact------- */
+.ct {
     text-align: center;
-  }
-  .ct h5{
+}
+
+.ct h5 {
     font-size: 15px;
     margin: 0;
     color: #7f7f9e;
     font-family: "Inter", sans-serif;
-  }
-  .ct span{
+}
+
+.ct span {
     color: #ce1212;
-  }
-  .ct p{
+}
+
+.ct p {
     font-size: 50px;
-    font-family:"Amatic SC", sans-serif;
+    font-family: "Amatic SC", sans-serif;
     margin: 0;
-  }
-  .cot{
-    background-color:#fff;
+}
+
+.cot {
+    background-color: #fff;
     width: 1300px;
-    margin-left: 65px;
+    margin: 0 auto;
+    /* Changed from margin-left: 65px; to center it */
     position: relative;
-  }
-  .contact iframe{
+}
+
+.contact iframe {
     width: 100%;
     height: 300px;
     margin-bottom: 30px;
-  }
-  .icon{
-    width:50px ;
-    height:50px ;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background-color: #ce1212;
     text-align: center;
     align-content: center;
-  }
-  .icon i{
+}
+
+.icon i {
     font-size: 20px;
     color: #fff;
-  }
-  .address-word{
+}
+
+.address-word {
     padding-left: 8px;
-  }
-  .cot h3{
+}
+
+.cot h3 {
     color: #7d7d7d;
     font-size: 25px;
-margin: 0;
-  }
-  .cot p{
-margin: 0;
-  }
-  .address{
+    margin: 0;
+}
+
+.cot p {
+    margin: 0;
+}
+
+.address {
     position: absolute;
     padding: 20px;
     display: flex;
     left: 0;
     right: 50%;
     background-color: #f5f5f5;
-  }
-  .email-word{
+}
+
+.email-word {
     padding-left: 8px;
-  }
-  .email{
+}
+
+.email {
     position: absolute;
     padding: 20px;
     display: flex;
@@ -345,26 +451,31 @@ margin: 0;
     right: 0;
     background-color: #f5f5f5;
     margin-left: 25px;
-  }
-  .address-email{
+}
+
+.address-email {
     background-color: #fff;
     margin-bottom: 100px;
-  }
-  .phone-word{
+}
+
+.phone-word {
     padding-left: 8px;
-  }
-  .phone{
+}
+
+.phone {
     position: absolute;
     padding: 20px;
     display: flex;
     left: 0;
     right: 50%;
     background-color: #f5f5f5;
-  }
-  .opening-word{
+}
+
+.opening-word {
     padding-left: 8px;
-  }
-  .opening-hours{
+}
+
+.opening-hours {
     position: absolute;
     padding: 20px;
     display: flex;
@@ -372,145 +483,179 @@ margin: 0;
     right: 0;
     background-color: #f5f5f5;
     margin-left: 25px;
-  }
-  .info{
-    background-color:#fff;
+}
+
+.info {
+    background-color: #fff;
     box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
-  }
-  .name-email{
+}
+
+.name-email {
     display: flex;
     width: 1270px;
-  }
-  input, textarea{
+}
+
+input,
+textarea {
     width: 1250px;
     padding: 15px;
     outline: 1;
     font-size: 15px;
     margin-left: 23px;
 }
-textarea{
-  width: 1250px;
-  margin-left: 23px;
-  padding-bottom: 100px;
-}
-.button{
-  text-align: center;
-  border: 3px solid transparent;
-  border-radius: 25px;
-  padding: 13px 35px  ;
-  background-color: #ce1212;
-  color: #fff;
-  margin-left: 550px;
-  transition: all 0.4s;
-}
-.button:hover{
-  background-color: crimson;
-}
-/* last */
-div.metal{
-  position: relative;
-}
-.metal img{
-  width: 100%;
-  height: 420px;
-}
-div.back-lond{
-display: flex;
-position: absolute;
-color: #fff;
-top: 0;
-right: 0;
-left: 0;
-bottom: 0;
-font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-.first{
-  width: 25%;
-  margin-left: 30px;
+
+textarea {
+    width: 1250px;
+    margin-left: 23px;
+    padding-bottom: 100px;
 }
 
-.first h3{
-  text-align: center;
-  font-size: 20px;
+.button {
+    text-align: center;
+    border: 3px solid transparent;
+    border-radius: 25px;
+    padding: 13px 35px;
+    background-color: #ce1212;
+    color: #fff;
+    margin-left: 550px;
+    transition: all 0.4s;
 }
-.one{
-  display: flex;
-  align-content: center;
+
+.button:hover {
+    background-color: crimson;
 }
-.one img{
-   height: 40px;
-   width: 40px;
-   border-radius: 50%;
-   margin-top: 10px;
+
+/* last */
+div.metal {
+    position: relative;
+    /* Removed height: 420px; */
+    padding-bottom: 0;
 }
-.one h2{
-  margin:0 0 0 7px;
-  font-size: 30px;
+
+.metal img {
+    /* This image is now hidden as the background is applied to .back-lond */
+    display: none;
 }
-.legs::after{
+
+div.back-lond {
+    display: flex;
+    position: relative; /* Changed from absolute to relative */
+    color: #fff;
+    /* Removed top, right, left, bottom as position is now relative */
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    padding-bottom: 5px;
+    background-image: url('../images/textured-metal-background.jpg'); /* Applied background image */
+    background-size: cover; /* Ensures the background covers the element */
+    background-position: center; /* Centers the background image */
+    background-color: #37373f; /* Fallback background color */
+}
+
+.first {
+    width: 25%;
+    margin-left: 30px;
+}
+
+.first h3 {
+    text-align: center;
+    font-size: 20px;
+}
+
+.one {
+    display: flex;
+    align-content: center;
+}
+
+.one img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.one h2 {
+    margin: 0 0 0 7px;
+    font-size: 30px;
+}
+
+.legs::after {
     content: ".";
     color: #ce1212;
     font-size: 40px;
     align-items: center;
 }
-.gry{
-  height: 3px;
-  width: 350px;
-  background-color: #7d7d7d;
+
+.gry {
+    height: 3px;
+    width: 350px;
+    background-color: #7d7d7d; /* Changed to display the grey line as seen in images */
 }
-.icns i{
-  font-size: 20px;
-  padding: 0 35px 10px 30px;
+
+.icns i {
+    font-size: 20px;
+    padding: 0 35px 10px 30px;
 }
-.second{
-  width: 45%;
-  margin-left: 30px;
+
+.second {
+    width: 45%;
+    margin-left: 30px;
 }
-.second h3{
-  font-size: 20px;
+
+.second h3 {
+    font-size: 20px;
 }
-.email-btn{
-  display: flex;
+
+.email-btn {
+    display: flex;
 }
-.email-btn input{
-  padding: 10px;
-  margin-left: 0;
+
+.email-btn input {
+    padding: 10px;
+    margin-left: 0;
 }
-.email-btn button{
-  display: flex;
-  padding: 10px;
-  font-size: 15px;
-  background-color: #ce1212;
-  color: #fff;
-  margin-left: 10px;
-  transition: all 0.5s;
+
+.email-btn button {
+    padding: 10px;
+    font-size: 15px;
+    background-color: #ce1212;
+    color: #fff;
+    margin-left: 10px;
+    transition: all 0.5s;
 }
-.email-btn button i{
- padding: 3px;
+
+.email-btn button i {
+    padding: 3px;
 }
-.email-btn:hover button{
-  background-color: crimson;
+
+.email-btn:hover button {
+    background-color: crimson;
 }
-.link{
-  display: flex;
+
+.link {
+    display: flex;
+    margin-bottom: 40px;
 }
-.link .qu{
-  font-size: 17px;
-  padding: 6px 210px 6px 6px;
-  transition: all 0.4s;
+
+.link .qu {
+    font-size: 17px;
+    padding: 6px 210px 6px 6px;
+    transition: all 0.4s;
 }
-.qu:hover{
-  background-color: gray;
-  transform: translate(10px);
+
+.qu:hover {
+    background-color: gray;
+    transform: translate(10px);
 }
-.third{
-  margin-left: 30px;
+
+.third {
+    margin-left: 30px;
 }
-.third h3{
-  font-size: 20px;
+
+.third h3 {
+    font-size: 20px;
 }
-.third i{
-  color: #ce1212;
-  padding-right: 8px;
-  font-size: 22px;
+
+.third i {
+    color: #ce1212;
+    padding-right: 8px;
+    font-size: 22px;
 }
