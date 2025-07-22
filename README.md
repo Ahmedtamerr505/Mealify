@@ -1,6 +1,6 @@
 # 🍽️ Mealify – Your Culinary Journey Starts Here
 
-![Mealify Demo Screenshot](./images/Mealify.png) with a real screenshot of your live website for better visual impact!*
+![Mealify Demo Screenshot](./images/Mealify.png) 
 
 ---
 
