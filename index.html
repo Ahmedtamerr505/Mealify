@@ -404,24 +404,19 @@
 
                 navLinks.forEach(link => {
                     link.addEventListener('click', function(event) {
-                        // Remove 'active' class from all links
                         navLinks.forEach(l => l.classList.remove('active'));
 
-                        // Add 'active' class to the clicked link
                         this.classList.add('active');
                     });
                 });
 
-                // Optional: Set initial active link based on URL hash when page loads
                 const currentHash = window.location.hash;
                 if (currentHash) {
-                    // Find the link whose href matches the current hash
                     const activeLink = document.querySelector(`.ul ul li a[href="${currentHash}"]`);
                     if (activeLink) {
                         activeLink.classList.add('active');
                     }
                 } else {
-                    // If on the root or no hash, default to making the 'Home' link active
                     const homeLink = document.querySelector('.ul ul li a[href="#home"]');
                     if (homeLink) {
                         homeLink.classList.add('active');
