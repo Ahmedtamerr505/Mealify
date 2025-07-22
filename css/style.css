@@ -1,5 +1,5 @@
 html {
-    scroll-behavior: smooth; /* Added for smooth scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
 }
 
 * {
@@ -56,12 +56,9 @@ li {
     font-size: 25px;
     margin-right: 80px;
 }
-
-/* --- Modified styles for active class and underline --- */
 .ul ul li a {
     text-decoration: none;
     color: #212529;
-    /* Explicitly set default text color, or rely on parent if suitable */
     position: relative;
     padding-bottom: 5px;
     display: inline-block;
@@ -85,9 +82,6 @@ li {
     left: 0;
     right: auto;
 }
-
-/* --- End of modified styles --- */
-
 
 /* ------------home------------ */
 .home {
@@ -392,7 +386,6 @@ li {
     background-color: #fff;
     width: 1300px;
     margin: 0 auto;
-    /* Changed from margin-left: 65px; to center it */
     position: relative;
 }
 
@@ -524,30 +517,25 @@ textarea {
 .button:hover {
     background-color: crimson;
 }
-
-/* last */
 div.metal {
     position: relative;
-    /* Removed height: 420px; */
     padding-bottom: 0;
 }
 
 .metal img {
-    /* This image is now hidden as the background is applied to .back-lond */
     display: none;
 }
 
 div.back-lond {
     display: flex;
-    position: relative; /* Changed from absolute to relative */
+    position: relative;
     color: #fff;
-    /* Removed top, right, left, bottom as position is now relative */
     font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     padding-bottom: 5px;
-    background-image: url('../images/textured-metal-background.jpg'); /* Applied background image */
-    background-size: cover; /* Ensures the background covers the element */
-    background-position: center; /* Centers the background image */
-    background-color: #37373f; /* Fallback background color */
+    background-image: url('../images/textured-metal-background.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-color: #37373f; 
 }
 
 .first {
@@ -587,7 +575,7 @@ div.back-lond {
 .gry {
     height: 3px;
     width: 350px;
-    background-color: #7d7d7d; /* Changed to display the grey line as seen in images */
+    background-color: #7d7d7d; 
 }
 
 .icns i {
